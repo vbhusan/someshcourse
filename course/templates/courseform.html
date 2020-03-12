@@ -1,0 +1,12 @@
+{% load crispy_forms_tags %}
+
+{% block title %}Fill the Form{% endblock title %}
+
+{% block content %}
+<div class="edit">
+    <form method='post'>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn-primary" input type="submit" value="Save">Save</button>
+    </form>
+{% endblock content %}
